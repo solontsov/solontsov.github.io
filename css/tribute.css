@@ -1,0 +1,76 @@
+
+:root {
+    /* define custom colors */
+    --main-bg-color: rgb(96, 50, 38);
+    --main-color:rgb(180, 188, 188);
+}
+
+body {
+    margin: 0px auto 0px auto;
+    box-sizing: border-box;
+    border: 4px solid var(--main-color);
+    width: 90vw;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+/* text-align: center */
+h2,
+header,
+figcaption,
+nav {
+    text-align: center;
+}
+
+/* Make all the headings appear in italics, and change their font family to Times New Roman */
+h1, h2, h3 {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section, nav {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+figure {
+    margin: 5px;
+
+    padding-top: 5px; /* to move img down from top edge of figure, margin-top of img moves the whole figure down  */
+    background-color: var(--main-color);
+}
+
+figcaption {
+    color: black;
+    padding-bottom: 30px;
+}
+
+img {
+    /* to put image to the center we need to make it block element instead of inline */
+    display: block;
+    width: 25%;
+    margin: 5px auto 20px auto;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside */
+aside {
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+    float: right;
+    width: 30%; 
+    margin: 2em;
+    padding: 1em;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: right; /* just to aline something right */
+}
+
+nav {
+    font-size: 1.5em;
+    margin-bottom: 1em
+}
+
+a {
+    color: lightblue;
+}

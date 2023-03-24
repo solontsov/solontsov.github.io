@@ -1,0 +1,95 @@
+button {
+    font-size: 1rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+table {
+    margin-top: 8em;
+    border-collapse: collapse;
+    width: calc(100% - 0.5em);
+}
+
+th {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+
+
+td {
+    border-bottom: 1px solid black;
+    padding: 0.5em;
+}
+
+.editable {
+    cursor: pointer;
+}
+
+form {
+    z-index: 1; /* Sit on top */
+    position:fixed;
+    background-color: white;
+    top: 5em;
+    width: 90vw;
+    border-radius: 0.7rem;
+    overflow: hidden; /* to keep rounded corners  (cut cornets of child elements) */
+    display: none;
+    border: 1px solid black;
+}
+
+form > p {
+    background-color: #ccc;
+    padding-left: 1em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    line-height: 2em;
+}
+form > nav {
+    margin-left: 1em;
+}
+
+form > div {
+    margin: 1em;
+    margin-right: 1em;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+/* to ensure same font and font size in labels, input boxes and text areas */
+input, textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+    
+/* to vertically center text in labels (except reviewsLabel) */
+label:not(#reviewsLabel) {
+    display: flex;
+    align-items: center;
+}
+
+/* fixed top of page*/
+h1, body>nav  {
+    position: fixed;
+    background-color: white;
+    width: calc(100% - 0.7em);
+}
+thead {
+    background-color: white;
+    position: sticky;
+    top: 8em;
+}
+h1 {
+    margin: 0;
+    padding-top: 0.7em;
+    top: 0em;
+    height: 8.9rem;
+    border-bottom: 2px solid black; /* instead of "th" border that does't stay */
+}
+body>nav {
+    top: 5rem
+}
+
+.display-none {
+    display: none;
+}

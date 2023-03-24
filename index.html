@@ -1,10 +1,139 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Test page</title>
-<link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-   <div>
-       "Hello World 123"
-   </div> 
-</body> 
+    <div id="container">
+        <!-- Left side column -->
+        <aside>
+            <div id="profile" class="m-top-1">
+                <div class="upper-profile-part bg-grey-gradient"></div>
+                <img class="profile-image" src="./images/oleksandr.jpg" alt="Profile image">
+                <div class="profile-name m-top-1 m-lr-05">Oleksandr Solontsov</div>
+                <p class="profile-headline m-lr-05">
+                    Passionate junior Web Developer with experience in front-end development tools. Skilled in
+                    JavaScript,
+                    HTML, CSS, and React.js. Excellent at collaboration, problem-solving, and visual thinking
+                </p>
+                <div id="links">
+                    <h3>Links:</h3>
+                    <a href="https://linkedin.com/in/solontsov/">linkedin.com/in/solontsov/</a>
+                    <br>
+                    <a href="https://github.com/solontsov">github.com/solontsov</a>
+                    <br>
+                    <a href="https://hyperiondev.com/portfolio/103948/">Portfolio on HyperionDev</a>
+                </div>
+
+                <form action="">
+                    <!-- form with radio buttons -->
+                    <p>Please check the task you liked the most:</p>
+
+                    <input type="radio" id="task1" name="task" value="1">
+                    <label for="task1">Tribute</label><br>
+
+                    <input type="radio" id="task2" name="task" value="2">
+                    <label for="task2">The periodic table of the (chemical) elements</label><br>
+
+                    <input type="radio" id="task3" name="task" value="3">
+                    <label for="task3">Catalogue of books</label><br>
+
+                    <button type="submit" class="m-top-1">Submit</button>
+
+                </form>
+            </div>
+            <div class="left-menu-edge"></div>
+            <div content_id="task-examples" class="left-menu left-menu-selected" onclick="selectTab(this)">
+                Task examples
+            </div>
+            <div content_id="saved-for-later" class="left-menu bg-grey-gradient" onclick="selectTab(this)">
+                Saved for later
+            </div>
+            <div content_id="contact-me" class="left-menu bg-grey-gradient" onclick="selectTab(this)">
+                Contact me
+            </div>
+            <div class="left-menu-edge"></div>
+            <div class="lower-part bg-grey-gradient"></div>
+        </aside>
+
+        <!-- Main column -->
+        <main>
+            <!-- blank div to hide scrolled stuff -->
+            <div id="main-space"></div>
+            <div id="task-examples">
+                <!-- heading with a link to HyperionDev site -->
+                <h2 class="m-top-1">Some task examples done by me at
+                    <a
+                        href="https://www.hyperiondev.com/?utm_source=direct&utm_medium=referral&utm_campaign=earn_R2500&referral_code=37185CZQ">HyperionDev
+                        Web Development Bootcamp
+                    </a>
+                </h2>
+
+                <div class="task">
+                    <h3>"Tribute" task</h3>
+                    <p>HTML and CSS</p>
+                    <a href="./tribute.html">
+                        <img src="./images/tribute.png" alt="Tribute page image">
+                        <p>More ...</p>
+                    </a>
+                    <button type="button" onclick="saveForLater(this)">Save for later</button>
+                    <button type="button" onclick="changeLike(this)"><span class="unliked">♥</span> like</button>
+                </div>
+
+                <div class="task">
+                    <h3>"The periodic table of the (chemical) elements" task</h3>
+                    <p>CSS Grid</p>
+                    <a href="./periodic_table.html">
+                        <img src="./images/p_table1.jpg" alt="The periodic table page image">
+                        <p>More ...</p>
+                    </a>
+                    <button type="button" onclick="saveForLater(this)">Save for later</button>
+                    <button type="button" onclick="changeLike(this)"><span class="unliked">♥</span> like</button>
+
+                </div>
+
+                <div class="task">
+                    <h3>"Catalogue of books" task</h3>
+                    <p>A web page that lets a user to store information about a
+                        catalogue of books. The session storage is used to store the information in JSON format.</p>
+                    <a href="./catalog.html">
+                        <img src="./images/catalog.jpg" alt="Catalogue of books page image">
+                        <p>More ...</p>
+                    </a>
+                    <button type="button" onclick="saveForLater(this)">Save for later</button>
+                    <button type="button" onclick="changeLike(this)"><span class="unliked">♥</span> like</button>
+
+                </div>
+            </div>
+            <div id="saved-for-later" class="display-none">
+                <!-- heading -->
+                <h2 class="m-top-1">Saved for later</h2>
+            </div>
+            <div id="contact-me" class="display-none">
+                <!-- heading -->
+                <h2 class="m-top-1">Contact me</h2>
+                <div  class="task">
+                    <label for="author">Name: </label>
+                    <input type="text" name="author" id="author">
+                    <label for="email">e-mail:</label>
+                    <input type="text" name="email" id="email">
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" id="phone">
+                    <label for="emailbody">Message</label>
+                    <textarea name="emailbody" id="emailbody" rows="5"></textarea>
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

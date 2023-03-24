@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue of books</title>
+    <link rel="stylesheet" href="./css/catalog.css">
+</head>
+
+<body>
+    <h1>Catalogue of books</h1>
+
+    <nav>
+        <button id="addBook"><span>➕</span> Add book</button>
+        <button id="deleteBook"><span>🗑</span> Delete book</button>
+    </nav>
+
+    <table>
+        <!-- table header -->
+        <thead>
+            <tr>
+                <th>
+                    <input id="selectAll" type="checkbox" aria-label="Select all">
+                </th>
+                <th>id</th>
+                <th>author</th>
+                <th>title</th>
+                <th>genre</th>
+                <th>reviews</th>
+            </tr>
+        </thead>
+        <!-- table body -->
+        <tbody id="bookTableBody">
+         </tbody>
+    </table>
+
+    <form id="editBookForm" action="">
+        <!-- title -->
+        <p>Editing Book - id: <span>1</span></p>
+        <nav>
+            <button id="buttonOk" type="button">OK</button>
+            <button id="buttonCancel" type="button">Cancel</button>
+        </nav>
+        <div>
+            <label for="author">author</label>
+            <input type="text" name="author" id="author">
+            <label for="title">title</label>
+            <input type="text" name="title" id="title">
+            <label for="genre">genre</label>
+            <input type="text" name="genre" id="genre">
+            <label id="reviewsLabel" for="reviews">reviews</label>
+            <textarea name="reviews" id="reviews" rows="3"></textarea>
+        </div>
+    </form>
+    <script src="./js/catalog.js"></script>
+
+</body>
+
+</html>
